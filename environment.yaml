@@ -1,0 +1,13 @@
+name: illumina-assembly-snake
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  - anaconda
+dependencies:
+  - bioconda::snakemake
+  - bioconda::pilon
+  - bioconda::spades
+  - bioconda::shovill
+  - bioconda::skesa
+
