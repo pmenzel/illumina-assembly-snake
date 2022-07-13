@@ -16,8 +16,8 @@ source activate illumina-assembly-snake
 
 # Prepare data
 mkdir fastq
-cp /data/my_sample/reads_R1.fastq fastq/mysample_R1.fastq
-cp /data/my_sample/reads_R2.fastq fastq/mysample_R2.fastq
+cp /data/my_sample/reads_R1.fastq.gz fastq/mysample_R1.fastq.gz
+cp /data/my_sample/reads_R2.fastq.gz fastq/mysample_R2.fastq.gz
 
 # Declare desired assemblies and run workflow
 mkdir -p assemblies/mysample_shovill
@@ -43,7 +43,7 @@ source activate illumina-assembly-snake
 
 ## Usage
 First, prepare a folder called `fastq` containing the sequencing reads as
-two fastq files per sample, called `samplename_R1.fastq` and `samplename_R2.fastq`.
+two fastq files per sample, called `samplename_R1.fastq.gz` and `samplename_R2.fastq.gz`.
 
 Next, create a folder `assemblies` and inside create empty folders specifying
 the desired assemblies.
@@ -58,10 +58,10 @@ Sample 1 should be assembly with shovill, whereas sample2 should be assembly by 
 ```
 .
 ├── fastq
-│   ├── sample1_R1.fastq
-│   ├── sample1_R2.fastq
-│   ├── sample2_R1.fastq
-│   └── sample2_R2.fastq
+│   ├── sample1_R1.fastq.gz
+│   ├── sample1_R2.fastq.gz
+│   ├── sample2_R1.fastq.gz
+│   └── sample2_R2.fastq.gz
 │
 └── assemblies
     ├── sample1_shovill

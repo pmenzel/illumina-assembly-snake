@@ -19,8 +19,8 @@ rule all:
 rule shovill:
 	threads: 5
 	input:
-		fq1 = "fastq/{sample}_R1.fastq",
-		fq2 = "fastq/{sample}_R2.fastq"
+		fq1 = "fastq/{sample}_R1.fastq.gz",
+		fq2 = "fastq/{sample}_R2.fastq.gz"
 	output:
 		fa = "assemblies/{sample}_shovill/output.fa",
 		tmp_dir = temp(directory("assemblies/{sample}_shovill/tmp"))
@@ -34,8 +34,8 @@ rule shovill:
 rule spades:
 	threads: 5
 	input:
-		fq1 = "fastq/{sample}_R1.fastq",
-		fq2 = "fastq/{sample}_R2.fastq"
+		fq1 = "fastq/{sample}_R1.fastq.gz",
+		fq2 = "fastq/{sample}_R2.fastq.gz"
 	output:
 		fa = "assemblies/{sample}_spades/output.fa",
 		tmp_dir = temp(directory("assemblies/{sample}_spades_tmp"))
